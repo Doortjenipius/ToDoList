@@ -25,7 +25,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2O-u0-jgd">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2O-u0-jgd">
                                             <rect key="frame" x="8" y="4" width="36" height="36"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="36" id="1oJ-Zp-Tz5"/>
@@ -51,11 +51,13 @@
                                         <constraint firstItem="1lF-qe-4xS" firstAttribute="centerY" secondItem="tqW-k7-e1a" secondAttribute="centerY" id="PLp-Rn-n8A"/>
                                         <constraint firstItem="1lF-qe-4xS" firstAttribute="leading" secondItem="C2O-u0-jgd" secondAttribute="trailing" constant="8" id="Wd2-gm-iAx"/>
                                         <constraint firstItem="C2O-u0-jgd" firstAttribute="leading" secondItem="tqW-k7-e1a" secondAttribute="leading" constant="8" id="at8-S9-bly"/>
+                                        <constraint firstItem="C2O-u0-jgd" firstAttribute="centerY" secondItem="tqW-k7-e1a" secondAttribute="centerY" id="mUN-7Y-y2H"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="isCompleteButton" destination="C2O-u0-jgd" id="mUY-kl-xi4"/>
                                     <outlet property="titleLabel" destination="1lF-qe-4xS" id="BAH-ek-SYT"/>
+                                    <segue destination="Q9Z-3c-SBX" kind="show" identifier="showDetails" id="Rmj-Hp-Cyg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -72,9 +74,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="Q9Z-3c-SBX" kind="show" identifier="showDetails" id="zru-mQ-y6a"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Arg-mu-nrY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,7 +98,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Remind me to.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A8c-W8-IMW">
-                                                    <rect key="frame" x="44" y="7" width="331" height="30"/>
+                                                    <rect key="frame" x="60" y="7" width="299" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -109,7 +108,7 @@
                                                     </connections>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwE-vV-ul1">
-                                                    <rect key="frame" x="0.0" y="4" width="36" height="36"/>
+                                                    <rect key="frame" x="16" y="4" width="36" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="DQQ-2m-3ew"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="PaO-l9-fBN"/>
@@ -125,10 +124,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="A8c-W8-IMW" firstAttribute="leading" secondItem="PwE-vV-ul1" secondAttribute="trailing" constant="8" id="4gg-oE-DhQ"/>
+                                                <constraint firstItem="PwE-vV-ul1" firstAttribute="leading" secondItem="cYf-ws-rnH" secondAttribute="leadingMargin" id="4q0-53-PtF"/>
                                                 <constraint firstItem="A8c-W8-IMW" firstAttribute="centerY" secondItem="cYf-ws-rnH" secondAttribute="centerY" id="6Dq-dJ-ivB"/>
                                                 <constraint firstItem="PwE-vV-ul1" firstAttribute="centerY" secondItem="cYf-ws-rnH" secondAttribute="centerY" id="NeN-vX-xXB"/>
-                                                <constraint firstAttribute="trailing" secondItem="A8c-W8-IMW" secondAttribute="trailing" id="ch6-4P-d3p"/>
-                                                <constraint firstItem="PwE-vV-ul1" firstAttribute="leading" secondItem="cYf-ws-rnH" secondAttribute="leading" id="xfP-07-khu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="A8c-W8-IMW" secondAttribute="trailing" id="hPQ-UP-EI9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -279,6 +278,6 @@
         <image name="Unchecked" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zru-mQ-y6a"/>
+        <segue reference="Rmj-Hp-Cyg"/>
     </inferredMetricsTieBreakers>
 </document>
