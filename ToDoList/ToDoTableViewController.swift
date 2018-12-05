@@ -37,6 +37,7 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
                     fatalError("Could not dequeue a cell")
         }
         
+        // Dit komt nog
         cell.delegate = self
         let todo = todos[indexPath.row]
         cell.titleLabel?.text = todo.title

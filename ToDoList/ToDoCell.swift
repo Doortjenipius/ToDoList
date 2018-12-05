@@ -14,7 +14,7 @@ import UIKit
 }
 
 class ToDoCell: UITableViewCell {
-    
+    // dit ook
     var delegate: ToDoCellDelegate?
     
     @IBOutlet weak var isCompleteButton: UIButton!

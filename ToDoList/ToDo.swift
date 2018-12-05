@@ -14,7 +14,7 @@ struct ToDo: Codable {
     var dueDate: Date
     var notes: String?
     
-
+//dit komt nog.
     static func loadSampleToDos() -> [ToDo] {
         let todo1 = ToDo(title: "ToDo 1", isComplete: false,
                          dueDate: Date(), notes: "Leuk bericht")
@@ -33,7 +33,7 @@ struct ToDo: Codable {
         return try? propertyListDecoder.decode(Array<ToDo>.self,
                                                from: codedToDos)
     }
-
+    
     static let dueDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
