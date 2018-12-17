@@ -8,19 +8,22 @@
 
 import UIKit
 
-
+// Code die de cell doorgeeft aan het delegate.
 @objc protocol ToDoCellDelegate: class {
     func checkmarkTapped(sender: ToDoCell)
 }
 
 class ToDoCell: UITableViewCell {
-    // dit ook
+    // Kan de door middel van het property data doorgeven aan ToDoCellDelegate.
     var delegate: ToDoCellDelegate?
     
     @IBOutlet weak var isCompleteButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     
+    // Informeert de delegate dat de checkmark button is aangeklikt.
     @IBAction func completeButtonTapped(_ sender: Any) {
         delegate?.checkmarkTapped(sender: self)
     }
+    
+    
 }
